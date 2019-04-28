@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="progress">
+        <div id='prog1' class="prog1 progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%;" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <div id="track1"></div>
+    <div id="track2"></div>
+    <div id="track1-control">
+        <input class='form-control urlinput1' id="yt-vid1-url" name="yt-vid1-url" type="text"
+            placeholder="Enter YouTube Video URL">
+
+        <button class="btn btn-success" id="load-vid1" type="submit" onclick="getYTid1()">Load Video</button>
+        <button class="play-button button btn btn-success" id="play-button-1" onclick="vid1playpause()">Play(W)</button>
+    </div>
+    <div id="track2-control">
+        <input class='form-control' id="yt-vid2-url" name="yt-vid2-url" type="text"
+            placeholder="Enter YouTube Video URL">
+        <button class="btn btn-success" id="load-vid2" type="submit" onclick="getYTid2()">Load Video</button>
+        <button class="play-button button btn btn-success" id="play-button-2" onclick="vid2playpause()">Play(O)</button>
+    </div>
+    <div id="control-div">
+            <br><span id='cf-title'>Crossfader</span>
+        <div id="crossfader">
+            <span id="valtrack1"></span>
+            <input id="crossfader-input" type="range" name="points" min="0" max="100" oninput="showVal(this.value)"
+                onchange="showVal(this.value)">
+            <span id="valtrack2"></span>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
